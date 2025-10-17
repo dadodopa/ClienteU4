@@ -38,6 +38,11 @@ export function borrarFinal(array) {
     array.pop();
     return aeliminar;
 }
-export function mostrarElemento(array,numero) {
+export function elementoPosicion(array,numero) {
     return array[numero];
 }
+export function posicionElemento(array,elemento) {
+    forEach
+}
+
+export{mostrarNumeroElementos}
