@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h3
+            id="cab1"
+            onclick="this.innerHTML='Javascript en XHTML'"
+            onmouseover="this.style.background='red'"
+            onmouseout="this.style.background='white'"
+        >
+            Pulsa aquí para ver lo que se ejecuta
+        </h3>
+        <h3 id="cab2" onclick="document.getElementById('cab1').innerHTML='...'">
+            ...
+        </h3>
+
+        <!-- Podemos llamar a funciones externas -->
+        <h3 onclick="cambiar(this)">Pulsa aquí para ver qué se ejecuta</h3>
+        <script>
+            function cambiar(elem) {
+                elem.innerHTML = "Javascript en XHTML y función externa";
+            }
+        </script>
+
+        <!-- Hay acciones que desencadenan varios eventos. Ej. submit desencadena onmousedown, onclick, onmouseup, onsubmit.
+    Para evitar que el navegador ejecute la acción por defecto necesitamos añadir "return false;" -->
+        <a href="http://www.google.com" onclick="alertar(); return false;"
+            >Pulsa aquí para ver qué se ejecuta</a
+        >
+        <script>
+            function alertar() {
+                alert("Vamos a Google");
+            }
+        </script>
+        <br />
+        <a href="http://www.google.com" onclick="return preguntar();"
+            >Pulsa aquí para ver qué se ejecuta</a
+        >
+        <script>
+            function preguntar() {
+                return confirm("¿Deseas ir a Google?");
+            }
+        </script>
+    </body>
+</html>

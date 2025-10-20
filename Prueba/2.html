@@ -1,0 +1,21 @@
+<h3 id="tradicional">Pulsa aquí para ver lo que se ejecuta</h3>
+    <script>
+        document.getElementById("tradicional").onclick = cambiar; //¡¡Sin paréntesis!!
+        function cambiar() {
+            alert("Entramos en cambiar");
+            document.getElementById("tradicional").innerHTML = "Modelo de registro de eventos tradicional";
+            document.getElementById("tradicional").onclick = null;
+        }
+    </script>
+<h3 id="tradicional2">Pulsa aquí para ver qué se ejecuta</h3>
+    <script>
+        window.onload = function () {
+            alert("La página ha cargado correctamente");
+            document.getElementById("tradicional2").onclick = miMensaje; 
+        }
+
+
+        function miMensaje() {
+            document.getElementById("tradicional2").innerHTML = "Modelo de registro de eventos tradicional";
+        }
+    </script>

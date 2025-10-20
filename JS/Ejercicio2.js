@@ -32,6 +32,7 @@ let arrayPosibles=[];
 for (let i = 0; i < 1000; i++) {
     let moduloLetra=i%23
     if (posicionLetra==moduloLetra) {
-        arrayPosibles.push(i+ +letra);
+        arrayPosibles.push(i.concat(letra));
     }
+    document.getElementById('resultado').innerHTML=arrayPosibles
 }
