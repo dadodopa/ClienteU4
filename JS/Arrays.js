@@ -42,11 +42,19 @@ function elementoPosicion(array, numero) {
     return array[numero];
 }
 function posicionElemento(array, elemento) {
-    forEach;
+    array.forEach(function(element, indice){
+        if (element==elemento) {
+            return indice;
+        } else return false;
+    });
 }
 export{
     mostrarNumeroElementos,
     mostrarElementos,
     anadirPrincipio,
-    borrarPrincipio
+    borrarPrincipio,
+    anadirFinal,
+    borrarFinal, 
+    elementoPosicion, 
+    posicionElemento
 }
