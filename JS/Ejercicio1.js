@@ -30,12 +30,14 @@ document.getElementById("addCountryEnd").addEventListener("click", function () {
     document.getElementById("resultado").innerHTML =
         operarArray.mostrarElementos(arrayPaises);
 });
+
 //Eliminar al final
 document.getElementById("rmCountryEnd").addEventListener("click", function () {
     operarArray.borrarFinal(arrayPaises);
     document.getElementById("resultado").innerHTML =
         operarArray.mostrarElementos(arrayPaises);
 });
+
 //Eliminar al principio
 document
     .getElementById("rmCountryPrinciple")
@@ -44,13 +46,14 @@ document
         document.getElementById("resultado").innerHTML =
             operarArray.mostrarElementos(arrayPaises);
     });
+
 // Consultar país posición
 document
     .getElementById("consultCountryNumber")
     .addEventListener("click", function () {
         let posicion = prompt(
             "Añade el número de posicion que quieres saber el país"
-        );
+        )-1;
         if (posicion > arrayPaises.length) {
             document.getElementById(
                 "resultado"
@@ -59,16 +62,16 @@ document
             let elemento = operarArray.elementoPosicion(arrayPaises, posicion);
             document.getElementById(
                 "resultado"
-            ).innerHTML = `En la posición ${posicion} está el país ${elemento}`;
+            ).innerHTML = `En la posición ${posicion+1} está el país ${elemento}`;
         }
     });
-//Consultar país Nombre
+
+// Consultar país Nombre
 document
     .getElementById("consultCountryText")
     .addEventListener("click", function () {
         let nameCountry = prompt("Introduce el nombre del país a buscar");
         let pais = operarArray.posicionElemento(arrayPaises, nameCountry);
-        0;
         if (pais != false) {
             document.getElementById(
                 "resultado"

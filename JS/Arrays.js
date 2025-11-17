@@ -5,7 +5,7 @@ function mostrarNumeroElementos(array) {
 
 function mostrarElementos(array) {
     return array.toString();
-    }
+}
 
 function mostrarElementosReves(array, id) {
     [...array].reverse();
@@ -42,19 +42,16 @@ function elementoPosicion(array, numero) {
     return array[numero];
 }
 function posicionElemento(array, elemento) {
-    array.forEach(function(element, indice){
-        if (element==elemento) {
-            return indice;
-        } else return false;
-    });
+    return array.indexOf(elemento)+1;
 }
-export{
+
+export {
     mostrarNumeroElementos,
     mostrarElementos,
     anadirPrincipio,
     borrarPrincipio,
     anadirFinal,
-    borrarFinal, 
-    elementoPosicion, 
-    posicionElemento
-}
+    borrarFinal,
+    elementoPosicion,
+    posicionElemento,
+};
